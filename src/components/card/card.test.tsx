@@ -28,9 +28,7 @@ describe('Given the component card', () => {
     describe('when the button is clicked', () => {});
     test('should the fuction set called is called', () => {
       render(<RecipeReviewCard />);
-      const setStateMock = jest.fn();
-      const useStateMock: any = (useState: any) => [useState, setStateMock];
-      jest.spyOn(React, 'useState').mockImplementation(useStateMock);
+      const setStateMock = jest.spyOn(React, 'useState');
 
       fireEvent.click(screen.getByLabelText('show more'));
       expect(setStateMock).toBeCalled();
