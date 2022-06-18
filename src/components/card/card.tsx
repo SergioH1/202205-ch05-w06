@@ -9,7 +9,7 @@ import Collapse from '@mui/material/Collapse';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { ShoppingCart } from '@mui/icons-material';
+import { AddShoppingCart } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { products } from '../../data/products';
 
@@ -37,7 +37,16 @@ export function RecipeReviewCard() {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardHeader Typograf title="Pack novedades" subheader="In Stock" />
+      <CardHeader
+        Typograf
+        title="Pack novedades"
+        subheader="In Stock"
+        action={
+          <Typography variant="h5" color="textSecondary">
+            {products[0].price} €
+          </Typography>
+        }
+      />
       <CardMedia
         component="img"
         height="280"
@@ -54,7 +63,7 @@ export function RecipeReviewCard() {
           <FavoriteIcon />
         </IconButton>
         <IconButton aria-label="Add">
-          <ShoppingCart />
+          <AddShoppingCart />
         </IconButton>
         {Array(products[0].rating)
           .fill(5)
