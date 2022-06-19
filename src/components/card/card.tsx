@@ -37,7 +37,7 @@ export function RecipeReviewCard({ product }: { product: iProduct }) {
   };
 
   return (
-    <Card sx={{ maxWidth: 400 }}>
+    <Card sx={{ maxWidth: 390 }}>
       <CardHeader
         Typograf
         title={product.name}

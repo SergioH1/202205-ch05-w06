@@ -6,6 +6,7 @@ export function Layout({ children }: { children: JSX.Element }) {
   return (
     <>
       <NavbarHeader></NavbarHeader>
+      <main>{children}</main>
     </>
   );
 }

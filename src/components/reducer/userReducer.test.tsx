@@ -26,7 +26,7 @@ describe('Given UserReducer', () => {
     },
   ];
 
-  describe('When calling it with load action with an array got', () => {
+  describe('When calling it with load action with an array products', () => {
     test('Then it should return a new state with the action payload', () => {
       //Arrange
       const initialState: ProductModel[] = [];
@@ -39,7 +39,7 @@ describe('Given UserReducer', () => {
       expect(newState).toHaveLength(2);
     });
   });
-  describe('When calling it with add action with an array got', () => {
+  describe('When calling it with add action with an array products', () => {
     test('It should return a new state with the characeter added', () => {
       const initialState: ProductModel[] = [mockedArray[0]];
       const AddProductModel = { ...mockedArray[0], name: 'pepe', id: 5 };
@@ -51,7 +51,7 @@ describe('Given UserReducer', () => {
       expect(newState).toHaveLength(2);
     });
   });
-  describe('When calling it with update action an array got', () => {
+  describe('When calling it with update action an array products', () => {
     test('It should return a new state with the ProductModel updated', () => {
       //Arrange
       const initialState: ProductModel[] = [mockedArray[0]];
@@ -65,8 +65,22 @@ describe('Given UserReducer', () => {
       expect(newState).toEqual([updateProductModel]);
     });
   });
+  describe('When calling it with update action an same array products', () => {
+    test('It should return a new state with the ProductModel updated', () => {
+      //Arrange
+      const initialState: ProductModel[] = [mockedArray[0]];
+      const updateProductModel = { ...mockedArray[0] };
+      const actionForTest = action.updateProductsUser(updateProductModel);
+      // Act
+
+      const newState = userReducer(initialState, actionForTest);
+      //Asse
+      expect(newState).toHaveLength(1);
+      expect(newState).toEqual(initialState);
+    });
+  });
   describe('When calling it with delete action', () => {
-    test('It should load the mocked array of gots without the deleted one', () => {
+    test('It should load the mocked array of productss without the deleted one', () => {
       const initialState: ProductModel[] = [mockedArray[0]];
       const deleteProductModel = { ...mockedArray[0], id: 1 };
       const actionForTest = action.deleteProductsUser(deleteProductModel);

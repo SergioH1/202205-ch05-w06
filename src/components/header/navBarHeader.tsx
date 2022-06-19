@@ -12,13 +12,13 @@ export function NavbarHeader() {
           </Link>
         </li>
         <li key="pack">
-          <Link className="link" to="packs">
+          <Link className="link" to="/pack">
             <h2 className="header__title">Packs</h2>
           </Link>
         </li>
 
         <li key="Uni">
-          <Link className="link" to="unidad">
+          <Link className="link" to="/unit">
             <h2 className="header__title">Unidad</h2>
           </Link>
         </li>

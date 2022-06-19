@@ -1,3 +1,10 @@
+import { CategoryPack } from '../components/card/categoryPack';
+
 export function Packs() {
-  return <></>;
+  return (
+    <>
+      <CategoryPack></CategoryPack>
+    </>
+  );
 }
+export default Packs;

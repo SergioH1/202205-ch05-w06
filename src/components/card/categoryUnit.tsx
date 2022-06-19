@@ -1,10 +1,12 @@
 import { products } from '../../data/products';
 import { RecipeReviewCard } from './card';
-import './productCard.css';
-export function ProductsCard() {
+export function CategoryUnit() {
+  const productsPack = products.filter(
+    (product) => product.productType === 'Unit'
+  );
   return (
     <div className="container-card">
-      {products.map((product) => (
+      {productsPack.map((product) => (
         <RecipeReviewCard key={product.id} product={product} />
       ))}
     </div>

@@ -18,7 +18,7 @@ export const products = [
   {
     id: 2,
     name: 'Set trial',
-    productType: 'Pack',
+    productType: 'Unidad',
     price: 29.99,
     rating: 5,
     img: 'https://www.justspices.es/media/wysiwyg/cms/startseite_redesign/es2021/set_novedades.webp',
