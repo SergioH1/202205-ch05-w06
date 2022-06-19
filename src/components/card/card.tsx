@@ -12,7 +12,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { AddShoppingCart } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import { iProduct } from '../../model/iproducts';
+import { iProduct } from '../../model/productModel';
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;

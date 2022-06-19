@@ -11,6 +11,9 @@ export interface iProduct {
 export type aProduct = Array<iProduct>;
 
 export class ProductModel implements iProduct {
+  static generateId(): number {
+    return Math.ceil(Math.random() * 100_000);
+  }
   id: number;
   constructor(
     public name: string,
@@ -21,6 +24,6 @@ export class ProductModel implements iProduct {
     public content: string,
     public description: string
   ) {
-    this.id = 0;
+    this.id = ProductModel.generateId();
   }
 }
