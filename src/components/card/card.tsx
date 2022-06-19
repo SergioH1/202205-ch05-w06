@@ -11,7 +11,8 @@ import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { AddShoppingCart } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { products } from '../../data/products';
+
+import { iProduct } from '../../model/iproducts';
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -28,7 +29,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export function RecipeReviewCard() {
+export function RecipeReviewCard({ product }: { product: iProduct }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -36,26 +37,26 @@ export function RecipeReviewCard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 400 }}>
       <CardHeader
         Typograf
-        title="Pack novedades"
+        title={product.name}
         subheader="In Stock"
         action={
           <Typography variant="h5" color="textSecondary">
-            {products[0].price} €
+            {product.price} €
           </Typography>
         }
       />
       <CardMedia
         component="img"
         height="280"
-        image="https://www.justspices.es/media/wysiwyg/cms/startseite_redesign/es2021/set_novedades.webp"
-        alt="Pack novedades"
+        image={product.img}
+        alt={product.name}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {products[0].description}
+          {product.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -65,7 +66,7 @@ export function RecipeReviewCard() {
         <IconButton aria-label="Add">
           <AddShoppingCart />
         </IconButton>
-        {Array(products[0].rating)
+        {Array(product.rating)
           .fill(5)
           .map((_, i) => (
             <p>&#11088;</p>
@@ -84,7 +85,7 @@ export function RecipeReviewCard() {
           Contenido
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {products[0].content}
+          {product.content}
         </Typography>
 
         <CardContent></CardContent>
