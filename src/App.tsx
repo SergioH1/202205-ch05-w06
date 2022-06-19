@@ -1,57 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Route, Routes } from 'react-router';
 import './App.css';
 
+import { aMenuItems } from './components/interface/iMenu';
+import { Layout } from './components/layout/layout';
+import { BrowserRouter } from 'react-router-dom';
+/* istanbul ignore file */
 function App() {
+  const HomePage = React.lazy(() => import('./pages/productsPage'));
+  const PackPage = React.lazy(() => import('./pages/packsPage'));
+  const UnitPage = React.lazy(() => import('./pages/unitPage.'));
+  const options: aMenuItems = [
+    { path: '', label: 'Products', page: <HomePage /> },
+    { path: '/pack', label: 'Pack', page: <PackPage /> },
+    { path: '/unit', label: 'Unit', page: <UnitPage /> },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <React.Suspense>
+          <Routes>
+            {options.map((item) => (
+              <Route
+                key={item.label}
+                path={item.path}
+                element={item.page}
+              ></Route>
+            ))}
+          </Routes>
+        </React.Suspense>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

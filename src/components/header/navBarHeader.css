@@ -1,0 +1,36 @@
+li {
+  list-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.link {
+  color: inherit;
+  text-decoration: inherit;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  background-color: #ff006e;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  align-items: center;
+}
+.header__title {
+  color: white;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+.icon-shopping {
+  color: #ffbe0b;
+  margin-right: 0.8rem;
+}
