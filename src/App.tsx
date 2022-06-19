@@ -4,11 +4,11 @@ import './App.css';
 
 import { aMenuItems } from './components/interface/iMenu';
 import { Layout } from './components/layout/layout';
-function App() {
-  const ProductPage = React.lazy(() => import('./pages/products'));
 
+function App() {
+  const HomePage = React.lazy(() => import('./pages/productsPage'));
   const options: aMenuItems = [
-    { path: '', label: 'Products', page: <ProductPage /> },
+    { path: '', label: 'Products', page: <HomePage /> },
   ];
   return (
     <>

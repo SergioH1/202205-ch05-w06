@@ -4,6 +4,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { ProductsCard } from './components/card/productCard';
+// import { ProductsCard } from './components/card/productCard';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -12,6 +14,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      <ProductsCard></ProductsCard>
     </BrowserRouter>
   </React.StrictMode>
 );
