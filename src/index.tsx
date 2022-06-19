@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 // import { Provider } from 'react-redux';
 // import { store } from './store/store';
-
+/* istanbul ignore file */
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
