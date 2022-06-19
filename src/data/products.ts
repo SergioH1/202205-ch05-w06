@@ -62,8 +62,8 @@ export const products = [
   {
     id: 5,
     name: 'Sazonador Pollo al Curry',
-    productType: 'Pack',
-    price: 29.99,
+    productType: 'Unit',
+    price: 4.99,
     rating: 5,
     img: 'https://www.justspices.es/media/catalog/product/s/a/sazonadorpolloalcurry_es_stehend_ms_web_mit_nahaufnahme.png?width=400&height=400&quality=80&fit=bounds&format=jpeg',
 
@@ -76,10 +76,10 @@ export const products = [
   {
     id: 6,
     name: 'Sazonador tzatziki',
-    productType: 'Pack',
-    price: 5.0,
+    productType: 'Unit',
+    price: 5.99,
     rating: 5,
-    img: 'https://www.justspices.es/sazonador-tzatziki.html',
+    img: 'https://www.justspices.es/media/catalog/product/s/a/sazonadortzatziki_es_stehend_ms_web_mit_nahaufnahme.png?width=400&height=400&quality=80&fit=bounds&format=jpeg',
     content: ` Mix Carrot Cake (70g),
      Texas BBQ Mix (60g), Sazonador Lasana 
      (60g), Sazonador Croquetas (70g),

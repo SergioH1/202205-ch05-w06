@@ -5,7 +5,7 @@ import './App.css';
 import { aMenuItems } from './components/interface/iMenu';
 import { Layout } from './components/layout/layout';
 import { BrowserRouter } from 'react-router-dom';
-
+/* istanbul ignore file */
 function App() {
   const HomePage = React.lazy(() => import('./pages/productsPage'));
   const PackPage = React.lazy(() => import('./pages/packsPage'));
