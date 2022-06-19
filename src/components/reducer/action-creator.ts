@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
-import { ProductModel } from '../../model/iproducts';
+import { ProductModel } from '../../model/productModel';
 import { actionTypesUser } from './action-types';
 
 export const getProductsUser = createAction<Array<ProductModel>>(

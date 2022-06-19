@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { ProductModel } from '../../model/iproducts';
+import { ProductModel } from '../../model/productModel';
 import * as ac from './action-creator';
 
 const initialState: Array<ProductModel> = [];

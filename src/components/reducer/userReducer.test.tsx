@@ -1,5 +1,5 @@
 import * as action from './action-creator';
-import { ProductModel } from '../../model/iproducts';
+import { ProductModel } from '../../model/productModel';
 import { userReducer } from './userReducer';
 
 describe('Given UserReducer', () => {
